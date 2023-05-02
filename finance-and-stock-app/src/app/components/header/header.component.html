@@ -1,0 +1,29 @@
+<div data-navigation="container" class="i-top-header">
+  <div class="wrapper top-section">
+    <div class="hleft"><a class="logo selfLogo" [routerLink]="user.authStatus!='AUTH' ? ['/home'] : ['/dashboard']"><img alt="logo"
+          src="../../../assets/images/logo_sem_fundo.png"></a>
+    </div>
+    <div class="mnav_hb hide">
+      <div class="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+    </div>
+    <nav class="hright dnav">
+      <ul>
+
+        <li *ngIf="user.authStatus!='AUTH'" routerLinkActive="active"><a routerLink="/about">About</a></li>
+        <li *ngIf="user.authStatus!='AUTH'" routerLinkActive="active"><a routerLink="/contact">Contact</a></li>
+        <li *ngIf="user.authStatus!='AUTH'" routerLinkActive="active"><a routerLink="/form">Register</a></li>
+        <li *ngIf="user.authStatus!='AUTH'" routerLinkActive="active"><a routerLink="/login">Login</a></li>
+
+        <li *ngIf="user.authStatus=='AUTH'" routerLinkActive="active"><a routerLink="/dashboard">Dashboard</a></li>
+        <li *ngIf="user.authStatus=='AUTH'" routerLinkActive="active"><a routerLink="/details">User Details</a></li>
+        <li *ngIf="user.authStatus=='AUTH'" routerLinkActive="active"><a routerLink="/list">User List</a></li>
+        <li *ngIf="user.authStatus=='AUTH'" routerLinkActive="active"><a routerLink="/finance">Finance</a></li>
+        <li *ngIf="user.authStatus=='AUTH'" routerLinkActive="active"><a routerLink="/stock">Stock</a></li>
+        <li *ngIf="user.authStatus=='AUTH'" routerLinkActive="active"><a routerLink="/settings">Settings</a></li>
+        <li *ngIf="user.authStatus=='AUTH'" routerLinkActive="active"><a routerLink="/logout">Logout</a></li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
+<router-outlet></router-outlet>
