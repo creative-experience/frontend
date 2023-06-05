@@ -18,6 +18,7 @@ import { DetailsUserComponent } from './components/user/details-user/details-use
 import { ListUserComponent } from './components/user/list-user/list-user.component';
 import { XhrInterceptor } from './interceptors/app.request.interceptor';
 import { AuthGuard } from './routeguards/auth.guard';
+import { ThemeComponent } from './components/theme/theme.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AuthGuard } from './routeguards/auth.guard';
     ContactComponent,
     AddUserComponent,
     ListUserComponent,
-    DetailsUserComponent
+    DetailsUserComponent,
+    ThemeComponent
   ],
   imports: [
     BrowserModule,
